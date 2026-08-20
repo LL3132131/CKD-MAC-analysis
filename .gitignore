@@ -1,0 +1,79 @@
+# Local configuration and secrets
+config/paths.env
+.env
+.env.*
+*.pem
+*.key
+id_rsa*
+id_ed25519*
+*token*
+*api_key*
+*apikey*
+
+# Private or linkable data
+data/private/
+**/private/
+**/mappings/private/
+*patient_mapping*
+*sample_mapping_private*
+*cellid_mapping_private*
+
+# Raw sequencing and alignment files
+data/raw/
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.sam
+*.bam
+*.bai
+*.cram
+*.crai
+
+# Large processed objects distributed through GitHub Release
+*.rds
+*.h5ad
+*.loom
+*.bigWig
+*.bw
+*.bedGraph
+*.bdg
+
+# Reference genomes and indexes
+references/genomes/
+references/*index*/
+references/scenic_databases/
+references/ld/
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+*.bt2
+*.bt2l
+
+# Runtime results and residue
+results/
+*.Rhistory
+*.RData
+.Rproj.user/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+*.swo
+*.swp
+*.tmp
+*.temp
+*~
+.cache/
+.DS_Store
+Thumbs.db
+
+# Local release-audit artifacts kept outside the public repository history
+/GEO_*_report.md
+/GEO_*_validation.tsv
+/GEO_*_modified.tsv
+/GEO_*_placeholders.tsv
+
+# Approved CSV, TSV, TSV.GZ and 10x MEX files under data/ are intentionally
+# not ignored, including matrix.mtx.gz, features.tsv.gz and barcodes.tsv.gz.
